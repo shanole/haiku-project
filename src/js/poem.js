@@ -4,6 +4,7 @@ export default class Poem {
   }
 
   findLines() {
-    this.lines = this.words.split( /\n/);
+    this.linesArray = this.words.split( /\n/);
+    this.numberOfLines = this.linesArray.length;
   }
 }
