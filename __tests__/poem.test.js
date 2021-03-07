@@ -5,17 +5,18 @@ describe('Poem', () => {
 
   beforeEach(() => {
     testPoem = new Poem(`I write, erase, rewrite
-    Erase again, and then
-    A poppy blooms.`);
+Erase again, and then
+A poppy blooms.`);
   });
 
   test('should correctly create a poem object from a string argument', () => {
     expect(testPoem.words).toEqual(`I write, erase, rewrite
-    Erase again, and then
-    A poppy blooms.`)
+Erase again, and then
+A poppy blooms.`)
   });
 
   test('should separate the string argument into separate lines and put each line into a Poem.lines property that is an array', () => {
+    testPoem.findLines();
     expect(testPoem.lines).toEqual(["I write, erase, rewrite","Erase again, and then","A poppy blooms."])
   })
 });
