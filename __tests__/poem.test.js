@@ -24,6 +24,6 @@ A poppy blooms.`)
   })
 
   test('should have a method isHaiku that returns true if the poem has 3 lines, and false if not', () => {
-
+    expect(testPoem.isHaiku()).toEqual(true);
   })
 });
