@@ -1,0 +1,6 @@
+HELLO
+
+Specs
+* The poem has 3 lines
+* Verify english syllable rules and exceptions one at a time
+* Haikus should have 5/7/5 syllables
