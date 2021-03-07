@@ -4,3 +4,33 @@ Specs
 * The poem has 3 lines
 * Verify english syllable rules and exceptions one at a time
 * Haikus should have 5/7/5 syllables
+
+How to count number of syllables:
+--- Count the number of vowels in a word
+  --- Account for "y" as a vowel
+--- Subtract any silent vowels
+  --- Silent "e"
+  --- Second vowel when two vowels are together (that aren't diphthongs eg "ee")
+--- All diphthongs count as 1 syllable
+--- The number of vowel sounds left is the same as the number of syllables
+
+
+The number of syllables that you hear when you pronounce a word is the same as the number of vowels sounds heard. For example:
+The word "came" has 2 vowels, but the "e" is silent, leaving one vowel sound andone syllable.
+The word "outside" has 4 vowels, but the "e" is silent and the "ou" is a diphthong which counts as only one sound, so this word has only two vowels sounds and therefore, two syllables
+
+Beatrice 
+beetl 
+castle
+
+cat 
+seven
+gigantic
+
+Poem Object
+--- How many lines?
+--- Syllable counter per line?? 
+
+isHaiku
+
+PoetryBook Object? 
