@@ -6,6 +6,10 @@ export default class Poem {
   }
 
   isHaiku() {
-    
+    if (this.numberOfLines === 3) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

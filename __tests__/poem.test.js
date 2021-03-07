@@ -24,6 +24,12 @@ A poppy blooms.`)
   })
 
   test('should have a method isHaiku that returns true if the poem has 3 lines, and false if not', () => {
+    let notHaiku = new Poem(`This
+is
+not
+a
+haiku`);
     expect(testPoem.isHaiku()).toEqual(true);
+    expect(notHaiku.isHaiku()).toEqual(false);
   })
 });
