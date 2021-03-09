@@ -1,13 +1,11 @@
 export function syllableChecker(string) {
+  const vowels = ["a","e","i","o","u","y"]
+  let vowelCount = 0;
   
+  for (let i=0; i<string.length; i++) {
+    if (vowels.includes(string[i].toLowerCase())) {
+      vowelCount += 1;
+    }
+  }
+  return vowelCount;
 }
-
-// function isVowel(letter) {
-//   const vowels = ["a","e","i","o","u","y"]
-//   if (vowels.includes(letter.toLowerCase())) {
-//     return true;
-//   }
-//   else {
-//     return false;
-//   }
-// }
