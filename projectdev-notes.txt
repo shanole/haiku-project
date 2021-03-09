@@ -10,7 +10,7 @@ How to count number of syllables:
   --- Account for "y" as a vowel
 --- Subtract any silent vowels
   --- Silent "e"
-  --- Second vowel when two vowels are together (that aren't diphthongs eg "ee")
+  --- START HERE: Second vowel when two vowels are together (that aren't diphthongs eg "ee")
 --- All diphthongs count as 1 syllable
 --- The number of vowel sounds left is the same as the number of syllables
 
