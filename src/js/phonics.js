@@ -33,6 +33,9 @@ export function syllableChecker(string) {
     if (isVowel(cleanedString[i]) && isVowel(cleanedString[i - 1])) {
       vowelCount--;
     }
+    if (cleanedString[i] === "y" && isVowel(cleanedString[i - 1]) && isVowel(cleanedString[i + 1])) {
+      vowelCount++;
+    }
   }
 
   const wordsArray = cleanedString.split(" ");
@@ -43,5 +46,3 @@ export function syllableChecker(string) {
   });
   return vowelCount;
 }
-
-

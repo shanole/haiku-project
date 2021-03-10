@@ -21,5 +21,10 @@ describe('syllableChecker', () => {
     const string = "Eat my shorts";
     expect(syllableChecker(string)).toEqual(3);
   })
+
+  test('if a word has a vowel+"y"+vowel combination, should increment vowelCount by 2', () => {
+    const string = "player";
+    expect(syllableChecker(string)).toEqual(2);
+  })
 })
 
