@@ -10,7 +10,7 @@ function cleanString(string) {
 }
 
 function isVowel(letter) {
-  const vowels = ["a","e","i","o","u","y"]
+  const vowels = ["a", "e", "i", "o", "u", "y"]
   if (vowels.includes(letter)) {
     return true;
   }
@@ -22,18 +22,23 @@ function isVowel(letter) {
 export function syllableChecker(string) {
   const cleanedString = cleanString(string);
   let vowelCount = 0;
-  
-  for (let i=0; i<string.length; i++) {
+
+  for (let i = 0; i < string.length; i++) {
     if (isVowel(cleanedString[i])) {
-      vowelCount ++;
+      vowelCount++;
     }
   }
+
+  for (let i = 1; i < string.length; i++) {
+    if (isVowel(cleanedString[i]) && isVowel(cleanedString[i - 1])) {
+      vowelCount--;
+    }
+  }
+
   const wordsArray = cleanedString.split(" ");
-  wordsArray.forEach(function(word) {
-    if (word[0] === "y") {
-      vowelCount --;
-    } else if (word[word.length-1] === "e" && isVowel(word[word.length-2]) === false) {
-      vowelCount --;
+  wordsArray.forEach(function (word) {
+    if (word[word.length - 1] === "e" && isVowel(word[word.length - 2]) === false) {
+      vowelCount--;
     }
   });
   return vowelCount;
