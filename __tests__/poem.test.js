@@ -4,19 +4,19 @@ describe('Poem', () => {
   let testPoem;
 
   beforeEach(() => {
-    testPoem = new Poem(`I write, erase, rewrite
-Erase again, and then
-A poppy blooms.`);
+    testPoem = new Poem(`An old silent pond...
+A frog jumps into the pond,
+splash! Silence again.`);
   });
 
   test('should correctly create a poem object from a string argument', () => {
-    expect(testPoem.words).toEqual(`I write, erase, rewrite
-Erase again, and then
-A poppy blooms.`)
-  });
+    expect(testPoem.words).toEqual(`An old silent pond...
+A frog jumps into the pond,
+splash! Silence again.`);
+      });
 
   test('should separate the string into separate lines, put each line into a seperate index within an array, and assign the array to a property with the key linesArray', () => {
-    expect(testPoem.linesArray).toEqual(["I write, erase, rewrite", "Erase again, and then", "A poppy blooms."])
+    expect(testPoem.linesArray).toEqual(["An old silent pond...", "A frog jumps into the pond,", "splash! Silence again."])
   })
 
   test('creates a property with the key numberOfLines and the value of linesArray.length', () => {
@@ -40,4 +40,4 @@ hello`);
     expect(testPoem.isHaiku()).toEqual(true);
     expect(notHaiku.isHaiku()).toEqual(false);
   })
-});
+})
