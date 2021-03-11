@@ -40,7 +40,13 @@ export function syllableChecker(string) {
 
   const wordsArray = cleanedString.split(" ");
   wordsArray.forEach(function (word) {
-    if (word[word.length - 1] === "e" && isVowel(word[word.length - 2]) === false) {
+    let wordVowelCount = 0
+    for (let i = 0; i < word.length; i++) {
+      if (isVowel(word[i])) {
+        wordVowelCount++;
+      }
+    }
+    if (word[word.length - 1] === "e" && isVowel(word[word.length - 2]) === false && wordVowelCount > 1) {
       vowelCount--;
     }
   });

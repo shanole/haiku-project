@@ -17,6 +17,11 @@ describe('syllableChecker', () => {
     expect(syllableChecker(string)).toEqual(6);
   })
 
+  test('should count an "e" at the end of a word as a syllable if it is the only vowel in the word', () => {
+    const string = "the";
+    expect(syllableChecker(string)).toEqual(1);
+  })
+
   test('should not count a vowel if it occurs immediately after another vowel', () => {
     const string = "Eat my shorts";
     expect(syllableChecker(string)).toEqual(3);
